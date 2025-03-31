@@ -8,16 +8,27 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v4
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+      - uses: actions/checkout@v4
+
+      - name: Check for configure script
+        run: ls -la || echo "No configure script found!"
+
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y autoconf automake libtool
+
+      - name: Generate configure script (if missing)
+        run: autoreconf -i
+
+      - name: Run configure
+        run: ./configure
+
+      - name: Run make
+        run: make
+
+      - name: Run make check
+        run: make check
+
+      - name: Run make distcheck
+        run: make distcheck
