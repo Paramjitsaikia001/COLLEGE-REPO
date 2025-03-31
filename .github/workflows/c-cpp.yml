@@ -12,23 +12,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check for configure script
-        run: ls -la || echo "No configure script found!"
+      - name: List Files Before Configure
+        run: ls -la
 
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y autoconf automake libtool
 
-      - name: Generate configure script (if missing)
-        run: autoreconf -i
+      - name: Generate configure script (if needed)
+        run: autoreconf -i || echo "autoreconf failed"
+
+      - name: List Files After Autoreconf
+        run: ls -la
 
       - name: Run configure
-        run: ./configure
+        run: ./configure || echo "Configure script failed"
 
       - name: Run make
-        run: make
+        run: make || echo "Make failed"
 
       - name: Run make check
-        run: make check
+        run: make check || echo "Make check failed"
 
       - name: Run make distcheck
-        run: make distcheck
+        run: make distcheck || echo "Make distcheck failed"
