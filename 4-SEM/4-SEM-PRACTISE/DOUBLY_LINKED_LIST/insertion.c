@@ -10,8 +10,7 @@ struct node
     struct node *RIGHT;
 };
 
-void
-Insert(struct node **START)
+void Insert(struct node **START)
 {
     int value;
     printf("Enter the value where you want to insert :");
