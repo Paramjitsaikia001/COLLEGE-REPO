@@ -71,4 +71,6 @@ int main()
     printArr(arr, n);
     deletion(arr, &n);
     printArr(arr, n);
+
+    return 0;
 }

@@ -29,6 +29,7 @@ void Insert(struct node **START)
         *START = newnode;
         newnode->LEFT = *START;
         newnode->RIGHT = NULL;
+        return;
     }
     struct node *temp = *START;
     while (temp->RIGHT != NULL)
