@@ -19,7 +19,7 @@ int isempty(struct node *str)
 void Insert(struct node **START)
 {
     int value;
-    printf("Enter the value where you want to insert :");
+    printf("Enter the value  you want to insert :");
     scanf("%d", &value);
 
     struct node *newnode;
