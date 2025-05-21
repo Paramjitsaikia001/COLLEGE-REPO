@@ -42,6 +42,8 @@ void preorder(int bst[], int index)
     preorder(bst, 2 * index + 2);
 }
 
+
+
 int main()
 {
     int n;
