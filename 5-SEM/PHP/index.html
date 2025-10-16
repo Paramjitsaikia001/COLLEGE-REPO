@@ -1,0 +1,23 @@
+//a form for submitting name,age,email,password,gender,other details
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submission</title>
+</head>
+<body>
+    <h2>Submit Your Details</h2>
+    <form action="db.php" method="post">
+        Name: <input type="text" name="name" ><br><br>
+        Age: <input type="number" name="age" ><br><br>
+        Email: <input type="email" name="email" ><br><br>
+        Password: <input type="password" name="password" ><br><br>      
+        Gender: <select name="gender" >
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+        Other Details: <textarea name="other_details" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
