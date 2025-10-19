@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100vw;
+        }
+
+        nav {
+            width: 100%;
+            height: 100px;
+            color: white;
+            font-family: sans-serif;
+            background: #000;
+        }
+
+        ul {
+            list-style: none;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+
+        li {
+            cursor: pointer;
+        }
+
+        li:hover {
+            font-weight: bold;
+        }
+
+        a {
+
+            text-decoration: none;
+            color: white;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .admissionForm {
+            background: #414040;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .admissionForm:hover {
+            font-weight: bold;
+            background: white;
+            color: black;
+        }
+
+        .Courses:hover {
+            font-weight: bold;
+            background: #414040;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        section {
+            width: 100%;
+            height: 100%;
+            color: black;
+            background: #efa2a2;
+        }
+
+        ol {
+            list-style-type: decimal;
+            padding: 12px 20px;
+        }
+
+        .ourprinciple {
+            display: none;
+            transition: all;
+            transition-duration: 5s;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <a class="Courses" href="./coures.html">Courses & Prices</a>
+                <li>Faculty</li>
+                <li>Library</li>
+                <li>About Us</li>
+                <a class="admissionForm" href="./admissionForm.html">Admission Form</a>
+            </ul>
+        </nav>
+
+    </header>
+    <section>
+        <h3>process of admission</h3>
+        <ol>
+            <li> you need a bad luck</li>
+            <li>Visit our website www.prmjts.com</li>
+            <li>Click the admission form button</li>
+            <li>fill up the form</li>
+            <li>And wait for your E-mail</li>
+        </ol>
+        <div>
+
+            <button class="princBTN">Our Principle</button>
+            <p class="ourprinciple">Our principle is very good principle in all over the principle . the always want to
+                make out college to go downwards</p>
+        </div>
+
+    </section>
+
+
+
+
+
+    <script>
+        const AboutPrinc = document.querySelector(".ourprinciple")
+        const princBTN = document.querySelector(".princBTN")
+
+        princBTN.addEventListener("mouseenter", () => {
+            AboutPrinc.style.display = "flex"
+        })
+        princBTN.addEventListener("mouseleave", () => {
+            AboutPrinc.style.display = "none"
+        })
+
+    </script>
+</body>
+
+</html>
